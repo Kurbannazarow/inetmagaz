@@ -8,3 +8,5 @@ $(document).ready(function () {
         autoplayTimeout: 3000,
     });
 });
+
+const asa = 90;
