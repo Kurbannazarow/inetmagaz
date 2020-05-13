@@ -10,3 +10,4 @@ $(document).ready(function () {
 });
 
 const asa = 90;
+const eziz = "Eziz";
