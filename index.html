@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inet-magaz</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic-ext"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./libs/owl-carousel/assets/owl.carousel.min.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<!-- header container  -->
+		<div class="header__container">
+
+			<div class="header__logo">
+				Смарт-часы
+			</div>
+
+			<form class="header__search">
+				<div class="header__search-input-wrapper">
+					<input class="header__search-input" type="text" placeholder="Ищу товар...">
+				</div>
+				<div class="header__search-dropdown">
+
+					<div data-select class="header-select">
+						<div data-select-title="Категории" class="header-select__title">
+							Категории
+						</div>
+						<div class="header-select__dropdown hidden">
+							<div data-select-item="Часы" class="header-select__dropdown-item">Часы</div>
+							<div data-select-item="Умные" class="header-select__dropdown-item">Умные</div>
+							<div data-select-item="Тупые" class="header-select__dropdown-item">Тупые</div>
+						</div>
+					</div>
+
+					<!-- <select name="" id="">
+						<option value="1">Категории</option>
+						<option value="2">Часы</option>
+						<option value="3">Умные</option>
+						<option value="4">Тупые</option>
+					</select> -->
+				</div>
+				<div class="header__search-button-wrapper">
+					<button class="header__search-button" type="submit"><img src="./img/search_icon.svg"
+							alt="search"></button>
+				</div>
+			</form>
+
+			<div class="header__links">
+				<!-- cart link -->
+				<a href="#" class="header-link header-link--notify">
+					<span class="header-link__icon">
+						<svg enable-background="new 0 0 32 32" height="21px" id="Layer_1" version="1.1"
+							viewBox="0 0 32 32" width="21px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-icon">
+							<path
+								d="M27.719,20.296l3.607-10.718c0.181-0.519,0.044-0.792-0.103-0.998c-0.374-0.527-1.142-0.512-1.292-0.512  L9.546,8.074L9.002,5.341C8.855,4.732,8.421,4,7.546,4H1.817C1.224,4,1,4.59,1,5.146v1.49C1,7.172,1.222,7,1.838,7h4.837  l3.702,15.873c-0.588,0.623-0.908,1.609-0.908,2.457c0,1.864,1.484,3.465,3.379,3.465c1.791,0,3.132-1.795,3.35-2.795h7.21  c0.218,1,1.305,2.873,3.349,2.873c1.862,0,3.378-1.535,3.378-3.396c0-1.852-1.125-3.609-3.359-3.609  c-0.928,0-2.031,0.133-2.543,1.133h-8.859c-0.643-1-1.521-1.311-2.409-1.345L12.843,21h13.479  C27.338,21,27.538,20.786,27.719,20.296z M11.537,25.514c0-0.709,0.577-1.286,1.286-1.286c0.707,0,1.283,0.577,1.283,1.286  s-0.576,1.285-1.283,1.285C12.113,26.799,11.537,26.223,11.537,25.514z M26.783,26.783c-0.7,0-1.27-0.57-1.27-1.27  c0-0.7,0.569-1.27,1.27-1.27c0.701,0,1.27,0.569,1.27,1.27C28.053,26.213,27.484,26.783,26.783,26.783z" />
+						</svg>
+					</span>
+					<span class="header-link__text">
+						2 товара
+					</span>
+				</a>
+				<!-- wishlist link -->
+				<a href="#" class="header-link">
+					<span class="header-link__icon">
+						<svg enable-background="new 0 0 32 32" height="21px" id="Layer_1" version="1.1"
+							viewBox="0 0 32 32" width="21px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<path
+								d="M22.229,4.514c-2.547,0-4.85,1.334-5.919,3.414c-1.07-2.079-3.401-3.414-5.948-3.414  c-3.981,0-9.319,3.209-6.888,11.963C6.251,25.034,16.31,30.065,16.31,30.063c0,0.002,10.044-5.029,12.821-13.586  C31.562,7.723,26.209,4.514,22.229,4.514z" />
+						</svg>
+					</span>
+					<span class="header-link__text">
+						избранное
+					</span>
+				</a>
+				<!-- user link -->
+				<a href="#" class="header-link">
+					<span class="header-link__icon">
+						<svg enable-background="new 0 0 21 21" height="21px" id="Layer_1" version="1.1"
+							viewBox="0 0 500 500" width="21px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<path clip-rule="evenodd"
+								d="M415.762,346.214c-26.346-34.434-60.324-52.243-117.74-57.963  c-10.363-2.086-18.174-11.268-18.174-22.173c0-7.985,25.616-31.889,25.433-32.066c26.44-27.345,40.615-71.778,40.615-105.938  c0-53.057-42.702-96.124-95.396-96.124c-52.694,0-95.398,43.067-95.398,96.124c0,34.346,13.811,79.045,40.523,106.391  c0,0,25.529,23.629,25.529,31.614c0,11.543-8.721,21.168-19.989,22.536c-56.24,5.906-89.852,23.617-115.93,57.6  c-7.541,9.812-11.631,29.527-11.902,40.07c0.09,2.725,0,45.427,0,45.427c0,20.078,16.264,36.34,36.343,36.34h281.648  c20.078,0,36.345-16.262,36.345-36.34c0,0-0.089-42.702,0-45.427C427.4,375.741,423.3,356.025,415.762,346.214z"
+								fill-rule="evenodd" /></svg>
+					</span>
+					<span class="header-link__text">
+						логин
+					</span>
+				</a>
+			</div>
+
+		</div>
+		<!-- header nav  -->
+		<div class="header__nav">
+			<nav class="header-nav">
+				<div class="header-nav__categories">
+					<a href="#" class="header-mega-menu-link">
+						<span class="header-mega-menu-link__icon">
+							<svg height="22px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+								viewBox="0 0 32 32" width="22px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink">
+								<path
+									d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+							</svg>
+						</span>
+						<span class="header-mega-menu-link__text">
+							Категории
+						</span>
+					</a>
+				</div>
+
+
+				<div class="header-nav__deals">
+					<a href="#" class="header-nav__link">Super Deals</a>
+					<a href="#" class="header-nav__link">Featured Brands</a>
+					<a href="#" class="header-nav__link">Collections</a>
+					<a href="#" class="header-nav__link">Bestselling</a>
+				</div>
+
+
+				<div class="header-nav__select">
+					<!-- ITEM 1-->
+					<div class="header-nav__select-item">
+						<div data-select class="header-select header-select--nav">
+							<div data-select-title="Категории" class="header-select__title">
+								Помощь
+							</div>
+							<div class="header-select__dropdown hidden">
+								<div data-select-item="Помощь" class="header-select__dropdown-item">Помощь</div>
+								<div data-select-item="Оплата" class="header-select__dropdown-item">Оплата</div>
+								<div data-select-item="Доставка" class="header-select__dropdown-item">Доставка</div>
+							</div>
+						</div>
+						<!-- <select name="" id="">
+							<option value="1">Категории</option>
+							<option value="2">Часы</option>
+							<option value="3">Умные</option>
+							<option value="4">Тупые</option>
+						</select> -->
+					</div>
+
+					<!-- ITEM 2-->
+					<div class="header-nav__select-item">
+						<div data-select class="header-select header-select--nav">
+							<div data-select-title="Категории" class="header-select__title">
+								USD
+							</div>
+							<div class="header-select__dropdown hidden">
+								<div data-select-item="USD" class="header-select__dropdown-item">USD</div>
+								<div data-select-item="RU" class="header-select__dropdown-item">RU</div>
+								<div data-select-item="Manat" class="header-select__dropdown-item">Manat</div>
+							</div>
+						</div>
+						<!-- <select name="" id="">
+							<option value="1">Категории</option>
+							<option value="2">Часы</option>
+							<option value="3">Умные</option>
+							<option value="4">Тупые</option>
+						</select> -->
+					</div>
+
+					<!-- ITEM 3-->
+					<div class="header-nav__select-item">
+						<div data-select class="header-select header-select--nav">
+							<div data-select-title="Категории" class="header-select__title">
+								Язык
+							</div>
+							<div class="header-select__dropdown hidden">
+								<div data-select-item="Русский" class="header-select__dropdown-item">Русский</div>
+								<div data-select-item="English" class="header-select__dropdown-item">English</div>
+								<div data-select-item="Turkmenche" class="header-select__dropdown-item">Turkmenche</div>
+							</div>
+						</div>
+						<!-- <select name="" id="">
+							<option value="1">Категории</option>
+							<option value="2">Часы</option>
+							<option value="3">Умные</option>
+							<option value="4">Тупые</option>
+						</select> -->
+					</div>
+				</div>
+
+
+			</nav>
+		</div>
+	</header>
+
+	<section class="carousel-section">
+		<div class="container">
+			<!-- obertka -->
+			<div class="carousel owl-carousel owl-theme" id="carousel-header">
+				<!-- slide 1 -->
+				<div class="carousel__item">
+					<h2 class="carousel__item-title">
+						The Universe Through A Child S Eyes
+					</h2>
+					<div class="carousel__item-text">
+						<p>
+							Start sales
+						</p>
+					</div>
+				</div>
+				<!-- slide 2 -->
+				<div class="carousel__item">
+					<h2 class="carousel__item-title">
+						The Universe Through A Child S Eyes
+					</h2>
+					<div class="carousel__item-text">
+						<p>
+							Start sales
+						</p>
+					</div>
+				</div>
+				<!-- slide 3 -->
+				<div class="carousel__item">
+					<h2 class="carousel__item-title">
+						The Universe Through A Child S Eyes
+					</h2>
+					<div class="carousel__item-text">
+						<p>
+							Start sales
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="promo__section">
+		<div class="container">
+			<div class="promo__section-row">
+
+				<!-- col 1 -->
+				<div class="promo__section-col">
+					<a href="#" class="promo__section-item-link-wrapper">
+						<div class="promo__section-item">
+							<h4 class="promo__section-item_title">
+								Astronomy Or Astrology
+							</h4>
+							<div class="promo__section-item_subtitle">
+								Start sales
+							</div>
+							<img class="promo__section-item_img" src="./img/promo/headphones.png" alt="headphones">
+						</div>
+					</a>
+				</div>
+
+				<!-- col 2 -->
+				<div class="promo__section-col">
+					<a href="#" class="promo__section-item-link-wrapper">
+						<div
+							class="promo__section-item promo__section-item--background-img promo__section-item--background-img-watch">
+							<h4 class="promo__section-item_title">
+								The Basics Of Buying
+								A Telescope
+							</h4>
+							<div class="promo__section-item_subtitle">
+								Astronomy Or Astrology
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<!-- col 3 -->
+				<div class="promo__section-col">
+					<a href="#" class="promo__section-item-link-wrapper promo__section-item-link-wrapper--column">
+						<div class="promo__section-item promo__section-item--small ">
+							<div class="promo__section-item_img-cell">
+								<img src="./img/promo/pencil.png" alt="pencil">
+							</div>
+							<div class="promo__section-item_text-cell">
+								<h4 class="promo__section-item-t">
+									Getting Free Publicity
+									For Your Business
+								</h4>
+							</div>
+						</div>
+					</a>
+
+					<a href="#" class="promo__section-item-link-wrapper promo__section-item-link-wrapper--column">
+						<div class="promo__section-item promo__section-item--small ">
+							<div class="promo__section-item_img-cell">
+								<img src="./img/promo/watch-classic.png" alt="classic">
+							</div>
+							<div class="promo__section-item_text-cell">
+								<h4 class="promo__section-item-t">
+									How Plasma Tvs And
+									Lcd Tvs Differ
+								</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<main class="main-content">
+		<div class="container">
+			<div class="main__row">
+
+				<!-- left -->
+				<div class="main__column-left">
+					<nav class="navigation">
+						<ul class="navigation__list">
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/desctop-icon.png" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									Computers
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/imac-icon.png" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									Apple Computers
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/laptop-icon.png" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									Laptops
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/keyboard-icon.png" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									Friends
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/memory-icon.png" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									Computer Components
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/speaker-icon.png" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									Accessories
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/phone-icon.png" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									Cell Phones
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/tv-icon.png" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									TV & Video
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/game-icon.png" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									Game consoles
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+							<li class="navigation__item">
+								<div class="navigation__item-icon">
+									<img src="./img/category/watch-icon.svg" alt="desctop">
+								</div>
+								<div class="navigation__item-title">
+									Watches
+								</div>
+								<div class="navigation__item-arrow">
+									<img src="./img/category/arrow-icon.svg" alt="arrow">
+								</div>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+
+				<!-- left -->
+				<div class="main__column-right">
+
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./libs/owl-carousel/owl.carousel.min.js"></script>
+	<script src="./js/header-select.js"></script>
+	<script src="./js/main.js"></script>
+
+
+</body>
+
+</html>

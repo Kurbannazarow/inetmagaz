@@ -1,0 +1,50 @@
+// main: ../style.less
+
+.header-nav {
+    display: flex;
+    height: 60px;
+    border-left: @border;
+    border-right: @border;
+    width: 1110px;
+    margin: 0 auto;
+}
+
+.header-nav__categories {
+    border-right: @border;
+    width: 200px;
+}
+
+.header-nav__deals {
+    border-right: @border;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 38px;
+    padding-right: 38px;
+}
+
+.header-nav__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    color: @gray;
+    text-decoration: none;
+
+    &:not(:last-child) {
+        margin-right: 35px;
+    }
+
+}
+
+.header-nav__select {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav__select-item {
+    z-index: 9;
+
+    &:not(:last-child) {
+        border-right: @border;
+    }
+}
